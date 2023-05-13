@@ -68,4 +68,5 @@ group :development do
   gem "spring"
   gem "graphiql-rails"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem 'brakeman'
 end
