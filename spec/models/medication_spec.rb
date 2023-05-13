@@ -7,6 +7,6 @@ RSpec.describe Medication, type: :model do
   end
 
   describe 'relationships' do
-    it { belong_to :condition }
+    it { should belong_to :condition }
   end
 end

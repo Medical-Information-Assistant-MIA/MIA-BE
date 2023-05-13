@@ -6,6 +6,6 @@ RSpec.describe Condition, type: :model do
   end
 
   describe 'relationships' do
-    it { belong_to :user }
+    it { should belong_to :user }
   end
 end
