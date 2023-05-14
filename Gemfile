@@ -25,7 +25,7 @@ gem "puma", "~> 5.0"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -36,36 +36,37 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
-gem "graphql"
-gem "figaro"
-gem "faraday"
 gem "bundler-audit"
+gem "faraday"
+gem "figaro"
+gem "graphql"
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
 
-  gem 'pry'
-  gem 'net-http'
-  gem 'rspec-rails' # run `rails g rspec:install`
-  gem 'vcr'
-  gem 'webmock'
+  gem "net-http"
+  gem "pry"
+  gem "rspec-rails" # run `rails g rspec:install`
+  gem "vcr"
+  gem "webmock"
 
-  gem 'capybara' # https://github.com/teamcapybara/capybara
-  gem 'launchy'
-  gem 'shoulda-matchers' # https://github.com/thoughtbot/shoulda-matchers
-  gem 'orderly'
+  gem "capybara" # https://github.com/teamcapybara/capybara
+  gem "launchy"
+  gem "orderly"
+  gem "shoulda-matchers" # https://github.com/thoughtbot/shoulda-matchers
 
-  gem 'factory_bot_rails' # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
-  gem 'faker' # https://github.com/faker-ruby/faker
+  gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
+  gem "faker" # https://github.com/faker-ruby/faker
   gem "rubocop", require: false
-  gem 'simplecov' # !!RAILS HELPER ADD!!
+  gem "simplecov" # !!RAILS HELPER ADD!!
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  gem "spring"
+  gem "brakeman"
   gem "graphiql-rails"
+  gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
