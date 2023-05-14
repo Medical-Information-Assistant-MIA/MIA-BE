@@ -11,10 +11,4 @@ RSpec.describe User, type: :model do
   describe "relationships" do
     it { should have_many :conditions }
   end
-
-  describe "factory_bot_test" do 
-    it "is testing the factory bot" do 
-      user_1 = create(:user)
-    end
-  end
 end
