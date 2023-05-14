@@ -1,24 +1,261 @@
-# README
+<a name="readme-top"></a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+<br />
+<div align="center">
+  <!-- <a href="https://github.com/pantry-wizard/pantry_wizard_be">
+    <img src="LOGO_URL_HERE" alt="Logo" width="582" height="404">
+  </a> -->
 
-* Database creation
+<h3 align="center"></h3>
 
-* Database initialization
+  <p align="center">
+    <!-- ADD APP DESCRIPTION ****************** -->
+    <br>
+    This is the backend service of the application.
+    <br />
+    <!-- <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
+    <!-- <br /> -->
+    <!-- <br /> -->
+    <!-- <a href="https://github.com/github_username/repo_name">View Demo</a> -->
+    <!-- · -->
+    <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-BE/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-BE/issues">Request Feature</a>
+    ·
+    <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-FE">Front End Repo</a>
+  </p>
+</div>
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#testing-with-rspec">Testing With RSpec</a></li>
+      </ul>
+    </li>
+    <li><a href="#available-endpoints">Available Endpoints</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <!-- <li><a href="#usage">Usage</a></li> -->
+    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
+    <!-- <li><a href="#contributing">Contributing</a></li> -->
+    <!-- <li><a href="#license">License</a></li> -->
+    <!-- <li><a href="#contact">Contact</a></li> -->
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
+  </ol>
+</details>
 
-* ...
+
+<br>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<br>
+
+<!-- ADD PROJECT DESCRIPTION -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With:
+
+* [![Ruby]][Ruby-url] **3.1.1**
+* [![Rails]][Rails-url] **7.0.4**
+* [![Postgresql]][Postgresql-url]
+<!-- * [![Heroku]][Heroku-url] -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+<!-- This is a Ruby on Rails application which establishes API endpoints to be called in the <a href="UPDATE LINK"> `MIA-FE` </a> repository. To run the application locally, both front-end and back-end repositories will need to be cloned and set up fully with required gems and environment variables. -->
+
+<br>
+
+### Installation
+
+1. Clone the repo:
+   ```bash
+   git clone git@github.com:Medical-Information-Assistant-MIA/MIA-BE.git
+   ```
+
+2. Install gems:
+   ```bash
+   bundle install
+   ```
+
+3. To establish the database, run:
+   ```bash
+   rails db:create
+   ```
+
+4. Since this is the back-end repository, a database migration is also necessary, run:
+   ```bash
+   rails db:migrate
+   ```
+
+5. Install Figaro to establish environment variables:
+   ```bash
+   bundle exec figaro install
+   ```
+
+<!-- ADD THIS NEXT STEP ONCE AN EXTERNAL API IS INCORPORATED -->
+<!-- 6. Add your API key to the application.yml file
+    ```bash
+    API_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    ```
+<br> -->
+
+  Inspect the `/db/schema.rb` and compare to the 'Schema' section below to ensure this migration has been done successfully.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<br>
+
+
+### Testing with RSpec
+
+Once `MIA-BE` is correctly installed, run tests locally to ensure the repository works as intended.
+
+<br>
+
+  To test the entire RSpec suite, run:
+   ```bash
+   bundle exec rspec
+   ```
+
+<br>
+
+All tests should be passing if the installation was successful. 
+
+<!-- If any tests are not passing, please report which tests are not passing <a href="PLEASE UPDATE LINK">Here</a>. We will issue an update/fix as soon as possible! -->
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<br>
+
+
+## __Available Endpoints__
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## __Goals__
+
+MIA was crafted to satisfy the requirements for The Turing Mod 4 **Capstone Project**. 
+
+See the official project requirements [here](https://mod4.turing.edu/projects/capstone/).
+
+<br>
+
+### __Learning Goals__
+<!-- Add Learning Goals -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### __Future Goals__
+<!-- Add Future Goals -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<br>
+
+## __Database Schema__
+
+<!-- Insert Image Here -->
+
+<br>
+
+## __Back End Team__
+<table>
+<!-- Update picture links -->
+  <!-- <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/116330317?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/88596340?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/104170346?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/71752551?s=120&v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/117066950?s=120&v=4"></td>
+  </tr> -->
+  <tr>
+    <td>Bradley Dunlap</td>
+    <td>Chris Crane</td>
+    <td>Kara Jones-Hofmann</td>
+    <td>Matt Enyeart</td>
+    <td>Tori Enyart</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/brad-dunlap">GitHub</a><br>
+      <!-- <a href="https://www.linkedin.com/in/brad/">LinkedIn</a> -->
+    </td>
+    <td>
+      <a href="https://github.com/GreenGogh47">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/chris-crane-16106814/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/KaraJoHo">GitHub</a><br>
+      <!-- <a href="https://www.linkedin.com/in/kara/">LinkedIn</a> -->
+    </td>
+    <td>
+      <a href="https://github.com/menyeart">GitHub</a><br>
+      <!-- <a href="https://www.linkedin.com/in/matt/">LinkedIn</a> -->
+    </td>
+    <!-- <td>
+      <a href="https://github.com/tori">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/tori/">LinkedIn</a>
+    </td> -->
+    <td>
+      <!-- <a href="https://github.com/tori">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/tori/">LinkedIn</a> -->
+    </td>
+  </tr>
+</table>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/Medical-Information-Assistant-MIA/MIA-BE.svg?style=for-the-badge
+[contributors-url]: https://github.com/Medical-Information-Assistant-MIA/MIA-BE/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/pantry-wizard/pantry_wizard_be.svg?style=for-the-badge
+[forks-url]: https://github.com/pantry-wizard/pantry_wizard_be/network/members
+[stars-shield]: https://img.shields.io/github/stars/pantry-wizard/pantry_wizard_be.svg?style=for-the-badge
+[stars-url]: https://github.com/pantry-wizard/pantry_wizard_be/stargazers
+[issues-shield]: https://img.shields.io/github/issues/pantry-wizard/pantry_wizard_be.svg?style=for-the-badge
+[issues-url]: https://github.com/pantry-wizard/pantry_wizard_be/issues
+[license-shield]: https://img.shields.io/github/license/pantry-wizard/pantry_wizard_be.svg?style=for-the-badge
+[license-url]: https://github.com/pantry-wizard/pantry_wizard_be/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/screenshot.png
+[Ruby]: https://img.shields.io/badge/ruby-000000?style=for-the-badge&logo=ruby&logoColor=red
+[Ruby-url]: https://www.ruby-lang.org/en/
+[Rails]: https://img.shields.io/badge/rails-red?style=for-the-badge&logo=rubyonrails&logoColor=white&color=red
+[Rails-url]: https://rubyonrails.org/
+[Postgresql]: https://img.shields.io/badge/postgresql-3386FF?style=for-the-badge&logo=postgresql&logoColor=FFFFFF
+[Postgresql-url]: https://www.postgresql.org/
+[Heroku]: https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white
+[Heroku-url]: https://www.heroku.com/
