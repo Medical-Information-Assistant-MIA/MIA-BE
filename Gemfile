@@ -51,7 +51,7 @@ group :development, :test do
   gem "rspec-rails" # run `rails g rspec:install`
   gem "vcr"
   gem "webmock"
-
+	gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
   gem "capybara" # https://github.com/teamcapybara/capybara
   gem "launchy"
   gem "orderly"
@@ -66,7 +66,6 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem "brakeman"
-  gem "graphiql-rails"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
