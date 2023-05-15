@@ -34,6 +34,7 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.include FactoryBot::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -62,22 +63,23 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+end
 
-  Shoulda::Matchers.configure do |config|
-    config.integrate do |with|
-      with.test_framework :rspec
-      with.library :rails
-    end
-  end
-
-  RSpec.configure do |config|
-    config.include FactoryBot::Syntax::Methods
-  end
-
-  VCR.configure do |config|
-    config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-    config.hook_into :webmock
-    # config.filter_sensitive_data("name_API_KEY") { ENV["name_API_KEY"] }
-    # The line above is used in conjunction with the figaro gem (config/application.yml)
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
   end
 end
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  # config.filter_sensitive_data("name_API_KEY") { ENV["name_API_KEY"] }
+  # The line above is used in conjunction with the figaro gem (config/application.yml)
+end
+
