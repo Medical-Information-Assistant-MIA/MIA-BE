@@ -77,26 +77,33 @@
 
 
 
-### Built With:
+### Backend:
 
-* [![Ruby]][Ruby-url] **3.1.1**
-* [![Rails]][Rails-url] **7.0.4**
-* [![Postgresql]][Postgresql-url] **1.1**
-* [![Heroku]][Heroku-url]
-* [![Capybara]][Capybara-url]
-* [![Faker]][Faker-url]
-* [![Factory Bot]][Factory Bot-url]
-* [![Faraday]][Faraday-url]
-* [![Figaro]][Figaro-url]
-* [![GraphQL]][GraphQL-url]
-* [![GraphiQL]][GraphiQL-url]
-* [![JSON-Serializer]][JSON-Serializer-url]
-* [![RSpec]][RSpec-url]
-* [![RuboCop]][RuboCop-url]
-* [![Shoulda-Matchers]][Shoulda-Matchers-url]
-* [![SimpleCov]][SimpleCov-url]
-* [![VCR]][VCR-url]
-* [![Web-mock]][Web-mock-url]
+[![Ruby]][Ruby-url] **3.1.1**
+[![Rails]][Rails-url] **7.0.4**
+[![Postgresql]][Postgresql-url] **1.1**
+[![GraphQL]][GraphQL-url]
+[![GraphiQL]][GraphiQL-url]
+[![JSON-Serializer]][JSON-Serializer-url]
+
+### Testing:
+
+[![Capybara]][Capybara-url]
+[![Faker]][Faker-url]
+[![Factory Bot]][Factory Bot-url]
+[![RSpec]][RSpec-url]
+[![Shoulda-Matchers]][Shoulda-Matchers-url]
+[![SimpleCov]][SimpleCov-url]
+[![VCR]][VCR-url]
+[![Web-mock]][Web-mock-url]
+
+### Development Tools:
+
+[![Heroku]][Heroku-url]
+[![Faraday]][Faraday-url]
+[![Figaro]][Figaro-url]
+[![RuboCop]][RuboCop-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
