@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -46,16 +48,16 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
 
+  gem "capybara" # https://github.com/teamcapybara/capybara
+  gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
+  gem "launchy"
   gem "net-http"
+  gem "orderly"
   gem "pry"
   gem "rspec-rails" # run `rails g rspec:install`
+  gem "shoulda-matchers" # https://github.com/thoughtbot/shoulda-matchers
   gem "vcr"
   gem "webmock"
-
-  gem "capybara" # https://github.com/teamcapybara/capybara
-  gem "launchy"
-  gem "orderly"
-  gem "shoulda-matchers" # https://github.com/thoughtbot/shoulda-matchers
 
   gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
   gem "faker" # https://github.com/faker-ruby/faker
@@ -66,7 +68,6 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   gem "brakeman"
-  gem "graphiql-rails"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
