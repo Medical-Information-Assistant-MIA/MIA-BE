@@ -42,7 +42,6 @@ gem "bundler-audit"
 gem "faraday"
 gem "figaro"
 gem "graphql"
-gem "sprockets"
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do
