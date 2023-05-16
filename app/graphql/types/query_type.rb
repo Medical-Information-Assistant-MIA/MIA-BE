@@ -12,18 +12,18 @@ module Types
     # TODO: remove me
     field :test_field, String, null: false, description: "An example field added by the generator"
 
-		field :user, Types::UsersType, null: false do
-			argument :id, Integer, required: true
-		end
+    field :user, Types::UsersType, null: false do
+      argument :id, Integer, required: true
+    end
 
-		field :users, [Types::UsersType], null: false
+    field :users, [Types::UsersType], null: false
 
-		def user(id:)
-			User.find(id)
-		end
+    def user(id:)
+      User.find(id)
+    end
 
-		def users
-			User.all
-		end
+    def users
+      User.all
+    end
   end
 end
