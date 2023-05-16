@@ -78,4 +78,3 @@ VCR.configure do |config|
   # config.filter_sensitive_data("name_API_KEY") { ENV["name_API_KEY"] }
   # The line above is used in conjunction with the figaro gem (config/application.yml)
 end
-
