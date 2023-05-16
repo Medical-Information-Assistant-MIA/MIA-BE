@@ -317,6 +317,7 @@ DEPENDENCIES
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets
   tzinfo-data
   vcr
   webmock
