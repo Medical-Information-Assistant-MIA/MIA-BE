@@ -182,9 +182,10 @@ All tests should be passing if the installation was successful.
 
 ## __Available Endpoints__
 
+Here are the current endpoints for the mock server through postman
+https://documenter.getpostman.com/view/27373334/2s93kxc6FD
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## __Goals__
 
