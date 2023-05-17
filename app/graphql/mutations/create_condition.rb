@@ -6,17 +6,17 @@ module Mutations
 		field :condition, Types::ConditionsType, null: true
 		field :errors, [String], null: true
 
-		def resolve(name:, conditionId:)
+		def resolve(name:, userId:)
 			condition = Condition.new(name: name, user_id: userId)
 
 			if condition.save
 				{
-					condition: condition
+					condition: condition,
 					errors: []
 				}
 			else 
 				{
-					condition: nil
+					condition: nil,
 					errors: condition.errors.full_messages
 				}
 			end

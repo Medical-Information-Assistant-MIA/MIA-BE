@@ -18,6 +18,14 @@ module Types
 
     field :users, [Types::UsersType], null: false
 
+		field :condition,Types::ConditionsType, null: false do
+			argument :id, Integer, required: true
+		end
+
+		field :user_conditions, [Types::ConditionsType], null: false do
+      argument :userId, Integer, required: true
+    end
+
     def user(id:)
       User.find(id)
     end
@@ -25,5 +33,9 @@ module Types
     def users
       User.all
     end
+
+		def user_conditions(userId:)
+			User.find(userId).conditions
+		end
   end
 end
