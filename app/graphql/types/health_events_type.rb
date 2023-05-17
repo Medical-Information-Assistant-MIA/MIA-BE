@@ -5,8 +5,8 @@ module Types
     field :id, Integer, null: false
     field :note, String, null: false
     field :date, String, null: false
-    field :condition_id, Integer, null: false
     field :category, String, null: true
+    field :condition, Types::ConditionsType, null: false
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
