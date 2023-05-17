@@ -42,6 +42,7 @@ gem "bundler-audit"
 gem "faraday"
 gem "figaro"
 gem "graphql"
+gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do
@@ -49,7 +50,6 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
 
   gem "capybara" # https://github.com/teamcapybara/capybara
-  gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
   gem "launchy"
   gem "net-http"
   gem "orderly"
