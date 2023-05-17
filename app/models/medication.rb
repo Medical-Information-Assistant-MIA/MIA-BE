@@ -3,5 +3,5 @@
 class Medication < ApplicationRecord
   belongs_to :condition
 
-  validates :name, :date_prescribed, presence: true
+  validates :name, presence: true
 end
