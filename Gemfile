@@ -44,6 +44,7 @@ gem "figaro"
 gem "graphql"
 gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
 gem "faker" # https://github.com/faker-ruby/faker
+gem "rack-cors"
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do
