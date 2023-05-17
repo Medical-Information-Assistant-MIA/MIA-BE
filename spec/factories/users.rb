@@ -7,6 +7,6 @@ end
 
 def user_with_three_conditions(conditions_count: 3)
   FactoryBot.create(:user) do |user|
-    FactoryBot.create_list(:condition, conditions_count, user:)
+    FactoryBot.create_list(:condition, conditions_count, user: user)
   end
 end
