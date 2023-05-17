@@ -42,6 +42,7 @@ gem "bundler-audit"
 gem "faraday"
 gem "figaro"
 gem "graphql"
+gem "faker" # https://github.com/faker-ruby/faker
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do
@@ -60,7 +61,6 @@ group :development, :test do
   gem "webmock"
 
   gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
-  gem "faker" # https://github.com/faker-ruby/faker
   gem "rubocop", require: false
   gem "simplecov" # !!RAILS HELPER ADD!!
 end
