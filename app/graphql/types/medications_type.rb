@@ -10,5 +10,6 @@ module Types
     field :frequency, String, null: true
     field :as_needed, Boolean, null: true
     field :prescribed_by, String, null: true
+		field :condition, Types::ConditionsType, null: false
   end
 end
