@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :condition do
-		association :user
+    association :user
     name { Faker::Lorem.word } # Faker::Emotion.noun ??
   end
 end

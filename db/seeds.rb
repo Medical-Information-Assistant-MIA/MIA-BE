@@ -16,9 +16,9 @@ user1 = FactoryBot.create(:user)
   condition = FactoryBot.create(:condition, user: user1)
 
   2.times do
-    FactoryBot.create(:doctor, condition: condition)
-    FactoryBot.create(:medication, condition: condition)
-    FactoryBot.create(:health_event, condition: condition)
+    FactoryBot.create(:doctor, condition:)
+    FactoryBot.create(:medication, condition:)
+    FactoryBot.create(:health_event, condition:)
   end
 end
 
@@ -29,8 +29,8 @@ user2 = FactoryBot.create(:user)
   condition = FactoryBot.create(:condition, user: user2)
 
   2.times do
-    FactoryBot.create(:doctor, condition: condition)
-    FactoryBot.create(:medication, condition: condition)
-    FactoryBot.create(:health_event, condition: condition)
+    FactoryBot.create(:doctor, condition:)
+    FactoryBot.create(:medication, condition:)
+    FactoryBot.create(:health_event, condition:)
   end
 end

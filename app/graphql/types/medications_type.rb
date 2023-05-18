@@ -9,6 +9,6 @@ module Types
     field :dosage, String, null: true
     field :frequency, String, null: true
     field :prescribed_by, String, null: true
-		field :condition, Types::ConditionsType, null: false
+    field :condition, Types::ConditionsType, null: false
   end
 end
