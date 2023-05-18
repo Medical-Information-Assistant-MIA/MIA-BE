@@ -46,6 +46,10 @@ module Types
       User.all
     end
 
+		def condition(id:)
+			Condition.find(id)
+		end
+
 		def user_conditions(userId:)
 			User.find(userId).conditions
 		end
