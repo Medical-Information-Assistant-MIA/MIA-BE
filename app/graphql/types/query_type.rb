@@ -18,25 +18,25 @@ module Types
 
     field :users, [Types::UsersType], null: false
 
-		field :condition,Types::ConditionsType, null: false do
-			argument :id, Integer, required: true
-		end
+    field :condition, Types::ConditionsType, null: false do
+      argument :id, Integer, required: true
+    end
 
-		field :user_conditions, [Types::ConditionsType], null: false do
+    field :user_conditions, [Types::ConditionsType], null: false do
       argument :userId, Integer, required: true
     end
 
-		field :condition_doctors, [Types::DoctorsType], null: false do
+    field :condition_doctors, [Types::DoctorsType], null: false do
       argument :conditionId, Integer, required: true
     end
 
-		field :condition_medications, [Types::MedicationsType], null: false do
-			argument :conditionId, Integer, required: true
-		end
+    field :condition_medications, [Types::MedicationsType], null: false do
+      argument :conditionId, Integer, required: true
+    end
 
-		field :condition_health_events, [Types::HealthEventsType], null: false do
-			argument :conditionId, Integer, required: true
-		end
+    field :condition_health_events, [Types::HealthEventsType], null: false do
+      argument :conditionId, Integer, required: true
+    end
 
     def user(id:)
       User.find(id)
@@ -46,20 +46,24 @@ module Types
       User.all
     end
 
-		def user_conditions(userId:)
-			User.find(userId).conditions
-		end
+    def condition(id:)
+      Condition.find(id)
+    end
 
-		def condition_doctors(conditionId:)
-			Condition.find(conditionId).doctors
-		end
+    def user_conditions(userId:)
+      User.find(userId).conditions
+    end
 
-		def condition_medications(conditionId:)
-			Condition.find(conditionId).medications
-		end
+    def condition_doctors(conditionId:)
+      Condition.find(conditionId).doctors
+    end
 
-		def condition_health_events(conditionId:)
-			Condition.find(conditionId).health_events
-		end
+    def condition_medications(conditionId:)
+      Condition.find(conditionId).medications
+    end
+
+    def condition_health_events(conditionId:)
+      Condition.find(conditionId).health_events
+    end
   end
 end

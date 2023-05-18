@@ -39,11 +39,11 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 gem "bundler-audit"
+gem "faker" # https://github.com/faker-ruby/faker
 gem "faraday"
 gem "figaro"
-gem "graphql"
 gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
-gem "faker" # https://github.com/faker-ruby/faker
+gem "graphql"
 gem "rack-cors"
 # The bundler-audit gem has been added for continuous integration
 

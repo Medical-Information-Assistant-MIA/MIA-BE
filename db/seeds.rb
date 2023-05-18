@@ -9,10 +9,28 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "faker"
 
-5.times do
-  user = User.create(name: Faker::Name.name, email: Faker::Internet.email)
+# Create User 1 with Conditions, Doctors, Medications, and Health Events
+user1 = FactoryBot.create(:user)
 
-  3.times do
-    user.conditions.create(name: Faker::Lorem.word)
+3.times do
+  condition = FactoryBot.create(:condition, user: user1)
+
+  2.times do
+    FactoryBot.create(:doctor, condition:)
+    FactoryBot.create(:medication, condition:)
+    FactoryBot.create(:health_event, condition:)
+  end
+end
+
+# Create User 2 with Conditions, Doctors, Medications, and Health Events
+user2 = FactoryBot.create(:user)
+
+3.times do
+  condition = FactoryBot.create(:condition, user: user2)
+
+  2.times do
+    FactoryBot.create(:doctor, condition:)
+    FactoryBot.create(:medication, condition:)
+    FactoryBot.create(:health_event, condition:)
   end
 end
