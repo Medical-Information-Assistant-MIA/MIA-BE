@@ -11,8 +11,7 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(conditionId:, name:, datePrescribed:, dosage:, frequency:, prescribedBy:)
-      medication = Medication.new(condition_id: conditionId, name:, date_prescribed: datePrescribed, dosage:, frequency:,
-                                  prescribed_by: prescribedBy)
+      medication = Medication.new(condition_id: conditionId, name:, date_prescribed: datePrescribed, dosage:, frequency:, prescribed_by: prescribedBy)
 
       if medication.save
         {
