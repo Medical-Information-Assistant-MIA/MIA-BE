@@ -9,5 +9,8 @@ RSpec.describe Condition, type: :model do
 
   describe "relationships" do
     it { should belong_to :user }
+    it { should have_many :doctors }
+    it { should have_many :health_events }
+    it { should have_many :medications }
   end
 end
