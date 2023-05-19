@@ -45,6 +45,7 @@ gem "figaro"
 gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
 gem "graphql"
 gem "rack-cors"
+gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do
@@ -61,7 +62,6 @@ group :development, :test do
   gem "vcr"
   gem "webmock"
 
-  gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
   gem "rubocop", require: false
   gem "simplecov" # !!RAILS HELPER ADD!!
 end
