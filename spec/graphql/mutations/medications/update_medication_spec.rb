@@ -27,19 +27,19 @@ module Mutations
         end
       end
 
-      # describe "error response" do 
-      #   it "renders an error if a required field is not provided" do 
-      #     user = create(:user)
-      #     condition = create(:condition, user_id: user.id)
+      describe "error responses" do 
+        it "renders an error if a medication id does not exist" do 
+          user = create(:user)
+          condition = create(:condition, user_id: user.id)
+          medication = create(:medication, condition_id: condition.id)
 
-      #     expect(Medication.count).to eq(0)
+          post '/graphql', params: { query: query(id: 333, name: "Red pill") }
+          data = JSON.parse(response.body, symbolize_names: true)
 
-      #     post '/graphql', params: { query: query(conditionId: condition.id, name: nil, datePrescribed: Date.today, dosage: "250mg", frequency: "2 every 6 hours as needed", prescribedBy: "Dr Pepperdine") }
-      #     data = JSON.parse(response.body, symbolize_names: true)
-
-      #     expect(data[:data][:createMedication][:errors]).to eq(["Name can't be blank"])
-      #   end
-      # end
+          expect(data[:data][:updateMedication][:errors]).to eq(["record-not-found"])
+          expect(data[:data][:updateMedication][:success]).to eq(false)
+        end
+      end
 
       def query(id:, name:)
         <<~GQL
