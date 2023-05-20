@@ -17,7 +17,18 @@ module Mutations
           expect(data[:data][:createUser][:user][:id]).to be_a(Integer)
           expect(data[:data][:createUser][:user][:name]).to eq("Brad")
 					expect(data[:data][:createUser][:user][:email]).to eq("test@test.com")
-        
+        end
+      end
+
+			describe "error response" do 
+        it "renders an error if a required field is not provided" do 
+          expect(User.count).to eq(0)
+
+          post '/graphql', params: { query: query(name: nil, email: "nil@nil.com") }
+          data = JSON.parse(response.body, symbolize_names: true)
+					require 'pry'; binding.pry
+
+          expect(data[:data][:createUser][:errors]).to eq(["Name can't be blank"])
         end
       end
      
