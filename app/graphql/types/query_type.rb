@@ -47,7 +47,10 @@ module Types
     end
 
     def condition(id:)
-      Condition.find(id)
+      begin
+        condition = Condition.find(id)
+      rescue ActiveRecord::RecordNotFound
+      end
     end
 
     def user_conditions(userId:)

@@ -8,6 +8,8 @@ module Types
     field :doctors, [Types::DoctorsType], null: false
     field :medications, [Types::MedicationsType], null: false
     field :health_events, [Types::HealthEventsType], null: false
+    # Added because RSpec testing was not able to find this field for returning the condition, but get condition was confirmed working with FE
+    field :user_id, Integer, null: false 
 
     def doctors
       object.doctors
