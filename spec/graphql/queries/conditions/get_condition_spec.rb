@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'action_dispatch'
 
   module Queries
     module Conditions
