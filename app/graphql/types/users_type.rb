@@ -7,9 +7,9 @@ module Types
     field :email, String, null: false
     field :conditions, [Types::ConditionsType], null: true
     field :created_at, String, null: false
-		field :updated_at, String, null: false
+    field :updated_at, String, null: false
 
-		def created_at
+    def created_at
       object.created_at.strftime("%B %d, %Y")
     end
   end

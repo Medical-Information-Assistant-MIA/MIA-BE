@@ -8,8 +8,8 @@ module Types
     field :medications, [Types::MedicationsType], null: false
     field :health_events, [Types::HealthEventsType], null: false
     # Added because RSpec testing was not able to find this field for returning the condition, but get condition was confirmed working with FE
-    field :user_id, Integer, null: false 
-		field :created_at, String, null: false
+    field :user_id, Integer, null: false
+    field :created_at, String, null: false
     field :updated_at, String, null: false
 
     def doctors
