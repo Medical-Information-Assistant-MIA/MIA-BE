@@ -7,7 +7,11 @@ module Types
     field :date, String, null: false
     field :category, String, null: true
     field :condition, Types::ConditionsType, null: false
-    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
-    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+		field :created_at, String, null: false
+		field :updated_at, String, null: false
+
+		def created_at
+      object.created_at.strftime("%B %d, %Y")
+    end
   end
 end

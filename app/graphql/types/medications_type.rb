@@ -10,5 +10,11 @@ module Types
     field :frequency, String, null: true
     field :prescribed_by, String, null: true
     field :condition, Types::ConditionsType, null: false
+		field :created_at, String, null: false
+    field :updated_at, String, null: false
+
+		def created_at
+      object.created_at.strftime("%B %d, %Y")
+    end
   end
 end
