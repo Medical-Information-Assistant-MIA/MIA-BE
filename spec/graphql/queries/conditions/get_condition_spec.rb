@@ -4,6 +4,9 @@ require 'action_dispatch'
   module Queries
     module Conditions
       RSpec.describe Condition, type: :request do
+				include ActionDispatch::Integration::RequestHelpers
+				include RSpec::Rails::RequestExampleGroup
+
         describe '.resolve' do
           it 'gets a condition' do
             user = create(:user)
