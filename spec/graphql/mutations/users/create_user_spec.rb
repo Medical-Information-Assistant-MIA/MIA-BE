@@ -13,29 +13,14 @@ module Mutations
           expect(User.count).to eq(1)
           expect(response).to be_successful
           expect(data[:data]).to have_key(:createUser)
-          expect(data[:data][:createUser].keys).to eq(%i[User errors])
-          expect(data[:data][:createUser][:User][:id]).to be_a(Integer)
-          expect(data[:data][:createUser][:User][:name]).to eq("Brad")
-					expect(data[:data][:createUser][:User][:email]).to eq("test@test.com")
+          expect(data[:data][:createUser].keys).to eq(%i[user errors])
+          expect(data[:data][:createUser][:user][:id]).to be_a(Integer)
+          expect(data[:data][:createUser][:user][:name]).to eq("Brad")
+					expect(data[:data][:createUser][:user][:email]).to eq("test@test.com")
         
         end
       end
-
-      # describe "error response" do
-      #   it "renders an error if a required field is not provided" do
-      #     user = create(:user)
-      #     condition = create(:condition, user_id: user.id)
-
-      #     expect(User.count).to eq(0)
-
-      #     post "/graphql",
-      #          params: { query: query(conditionId: condition.id, name: nil, datePrescribed: Date.today, dosage: "250mg", frequency: "2 every 6 hours as needed",
-      #                                 prescribedBy: "Dr Pepperdine") }
-      #     data = JSON.parse(response.body, symbolize_names: true)
-
-      #     expect(data[:data][:createUser][:errors]).to eq(["Name can't be blank"])
-      #   end
-      # end
+     
 
       def query(name:, email:)
         <<~GQL
@@ -44,7 +29,7 @@ module Mutations
               name: "#{name}"
               email: "#{email}"
             }) {
-              User {
+              user {
                 id
                 name
                 email
