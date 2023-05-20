@@ -39,13 +39,13 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 gem "bundler-audit"
+gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
 gem "faker" # https://github.com/faker-ruby/faker
 gem "faraday"
 gem "figaro"
 gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
 gem "graphql"
 gem "rack-cors"
-gem "factory_bot_rails" # !!RAILS HELPER ADD!! https://github.com/thoughtbot/factory_bot_rails
 # The bundler-audit gem has been added for continuous integration
 
 group :development, :test do

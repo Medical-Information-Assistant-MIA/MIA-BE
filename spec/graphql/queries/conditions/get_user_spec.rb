@@ -1,19 +1,18 @@
-require 'rails_helper'
-require 'action_dispatch'
+require "rails_helper"
+require "action_dispatch"
 
 module Queries
   module Users
     RSpec.describe User, type: :request do
       include ActionDispatch::Integration::RequestHelpers
-			include RSpec::Rails::RequestExampleGroup
+      include RSpec::Rails::RequestExampleGroup
 
-      
-      describe '.resolve' do
-        it 'gets a user' do
+      describe ".resolve" do
+        it "gets a user" do
           user = create(:user)
-          keys = [:id, :name, :email, :conditions]
+          keys = %i[id name email conditions]
 
-          post '/graphql', params: { query: query(user.id) }
+          post "/graphql", params: { query: query(user.id) }
 
           data = JSON.parse(response.body, symbolize_names: true)
 
@@ -24,16 +23,16 @@ module Queries
 
       def query(id)
         <<~GQL
-          {
-            user(id: #{id}) {
-              id
-              name
-							email
-              conditions {
-                name
-              }
-            }
-          }
+             {
+               user(id: #{id}) {
+                 id
+                 name
+          email
+                 conditions {
+                   name
+                 }
+               }
+             }
         GQL
       end
     end
