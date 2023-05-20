@@ -12,5 +12,9 @@ module Types
 		field :update_user, mutation: Mutations::UpdateUser
 
 		field :destroy_user, mutation: Mutations::DestroyUser
+
+
+    field :destroy_condition, mutation: Mutations::DestroyCondition
+    field :update_condition, mutation: Mutations::UpdateCondition
   end
 end
