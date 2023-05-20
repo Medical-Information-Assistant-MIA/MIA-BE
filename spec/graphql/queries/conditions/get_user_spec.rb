@@ -5,6 +5,8 @@ module Queries
   module Users
     RSpec.describe User, type: :request do
       include ActionDispatch::Integration::RequestHelpers
+			include RSpec::Rails::RequestExampleGroup
+
       
       describe '.resolve' do
         it 'gets a user' do
