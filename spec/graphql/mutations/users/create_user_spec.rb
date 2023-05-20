@@ -22,11 +22,10 @@ module Mutations
 
 			describe "error response" do 
         it "renders an error if a required field is not provided" do 
-          expect(User.count).to eq(0)
+         user = create(:user)
 
           post '/graphql', params: { query: query(name: nil, email: "nil@nil.com") }
           data = JSON.parse(response.body, symbolize_names: true)
-					require 'pry'; binding.pry
 
           expect(data[:data][:createUser][:errors]).to eq(["Name can't be blank"])
         end
