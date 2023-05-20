@@ -8,7 +8,7 @@ require 'rails_helper'
             user = create(:user)
             condition = create(:condition, user_id: user.id)
             doctor = create(:doctor, condition_id: condition.id)
-            health_event = create(:health_event, condition_id: condition.id)
+            health_event = create(:health_event, condition_id: condition.id, category: "doctor_visit")
             medication = create(:medication, condition_id: condition.id)
             keys = [:id, :userId, :name, :medications, :doctors, :healthEvents]
             doctor_keys = [:name, :phone, :address, :category]
@@ -30,7 +30,7 @@ require 'rails_helper'
             user = create(:user)
             condition = create(:condition, user_id: user.id)
             doctor = create(:doctor, condition_id: condition.id)
-            health_event = create(:health_event, condition_id: condition.id)
+            health_event = create(:health_event, condition_id: condition.id, category: "doctor_visit")
             medication = create(:medication, condition_id: condition.id)
             keys = [:id, :userId, :name, :medications, :doctors, :healthEvents]
             doctor_keys = [:name, :phone, :address, :category]
