@@ -11,16 +11,14 @@ module Mutations
           expect(Medication.count).to eq(0)
 
           post "/graphql",
-
             params: { query: query(
                       conditionId: condition.id,
                       name: "Tylenol",
                       datePrescribed: Date.today,
                       dosage: "250mg",
                       frequency: "2 every 6 hours as needed",
-                      prescribedBy: "Dr Pepperdine")
-                    }
-
+                      prescribedBy: "Dr Pepperdine"
+                    )}
              
           data = JSON.parse(response.body, symbolize_names: true)
 
@@ -46,14 +44,14 @@ module Mutations
           expect(Medication.count).to eq(0)
 
           post "/graphql",
-
             params: { query: query(
                       conditionId: condition.id,
                       name: nil,
                       datePrescribed: Date.today,
                       dosage: "250mg",
                       frequency: "2 every 6 hours as needed",
-                      prescribedBy: "Dr Pepperdine")
+                      prescribedBy: "Dr Pepperdine"
+                    )}
  
           data = JSON.parse(response.body, symbolize_names: true)
 
@@ -68,8 +66,8 @@ module Mutations
               name: "#{name}"
               conditionId: #{conditionId}
               datePrescribed: "#{datePrescribed}"
-              dosage: "#{dosage}"#{' '}
-              frequency: "#{frequency}"#{' '}
+              dosage: "#{dosage}"
+              frequency: "#{frequency}"
               prescribedBy: "#{prescribedBy}"
             }) {
               medication {
