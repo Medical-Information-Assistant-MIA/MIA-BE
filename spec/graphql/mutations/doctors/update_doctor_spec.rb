@@ -22,6 +22,20 @@ module Mutations
         end
       end
 
+      describe "error responses" do
+        it "renders an error if a doctor id does not exist" do
+          user = create(:user)
+          condition = create(:condition, user_id: user.id)
+          doctor = create(:doctor, condition_id: condition.id)
+
+          post "/graphql", params: { query: query(id: 333, name: "Dr. Jenny") }
+          data = JSON.parse(response.body, symbolize_names: true)
+
+          expect(data[:data][:updateDoctor][:errors]).to eq(["record-not-found"])
+          expect(data[:data][:updateDoctor][:success]).to eq(false)
+        end
+      end
+
       def query(name:, id:)
         <<~GQL
           mutation {
