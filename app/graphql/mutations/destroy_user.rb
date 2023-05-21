@@ -6,7 +6,7 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(id:)
-      user = User.find_by(id: id)
+      user = User.find_by(id:)
 
       if user
         if user.destroy
