@@ -9,7 +9,14 @@ module Mutations
           condition = create(:condition, user_id: user.id)
           expect(Doctor.count).to eq(0)
 
-          post "/graphql", params: { query: query(conditionId: condition.id, name: "Dr. Jenny", phone: "555-867-5309", address: "123 Healthy Ave.", category: "Cardiologist") }
+          post "/graphql",
+            params: { query: query(
+                      conditionId: condition.id,
+                      name: "Dr. Jenny",
+                      phone: "555-867-5309",
+                      address: "123 Healthy Ave.",
+                      category: "Cardiologist")
+                    }
           data = JSON.parse(response.body, symbolize_names: true)
 
           expect(Doctor.count).to eq(1)
@@ -19,6 +26,26 @@ module Mutations
           expect(data[:data][:createDoctor][:doctor][:phone]).to eq("555-867-5309")
           expect(data[:data][:createDoctor][:doctor][:address]).to eq("123 Healthy Ave.")
           expect(data[:data][:createDoctor][:doctor][:category]).to eq("Cardiologist")
+        end
+      end
+
+      describe "error response" do
+        it "renders an error if a required field is not provided" do
+          user = create(:user)
+          condition = create(:condition, user_id: user.id)
+          expect(Doctor.count).to eq(0)
+
+          post "/graphql",
+            params: { query: query(
+                      conditionId: condition.id,
+                      name: nil,
+                      phone: "555-867-5309",
+                      address: "123 Healthy Ave.",
+                      category: "Cardiologist")
+                    }
+          data = JSON.parse(response.body, symbolize_names: true)
+
+          expect(data[:data][:createDoctor][:errors]).to eq(["Name can't be blank"])
         end
       end
 
