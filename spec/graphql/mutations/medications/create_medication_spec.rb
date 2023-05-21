@@ -11,7 +11,7 @@ module Mutations
           expect(Medication.count).to eq(0)
 
           post "/graphql",
-               params: { query: query(conditionId: condition.id, name: "Tylenol", datePrescribed: Date.today, dosage: "250mg",
+            params: { query: query(conditionId: condition.id, name: "Tylenol", datePrescribed: Date.today, dosage: "250mg",
                                       frequency: "2 every 6 hours as needed", prescribedBy: "Dr Pepperdine") }
           data = JSON.parse(response.body, symbolize_names: true)
 
