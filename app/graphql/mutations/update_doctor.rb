@@ -15,7 +15,7 @@ module Mutations
       doctor = Doctor.find(id)
 
       if doctor.update(args)
-        { success: true, doctor: doctor, errors: [] }
+        { success: true, doctor:, errors: [] }
       else
         { success: false, doctor: nil, errors: doctor.errors.full_messages }
       end

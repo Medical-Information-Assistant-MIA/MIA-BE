@@ -10,12 +10,12 @@ module Mutations
     field :errors, [String], null: true
 
     def resolve(name:, conditionId:, address:, phone:, category:)
-      doctor = Doctor.new(name: name, condition_id: conditionId, address: address, phone: phone, category: category)
+      doctor = Doctor.new(name:, condition_id: conditionId, address:, phone:, category:)
       condition = Condition.find(conditionId)
 
       if doctor.save
         {
-          doctor: doctor,
+          doctor:,
           errors: []
         }
       else

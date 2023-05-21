@@ -12,7 +12,7 @@ module Mutations
 
           post "/graphql", params: { query: query(id: doctor.id) }
           data = JSON.parse(response.body, symbolize_names: true)
-          
+
           expect(response).to be_successful
           expect(data[:data][:destroyDoctor][:success]).to eq(true)
           expect(Doctor.count).to eq(0)

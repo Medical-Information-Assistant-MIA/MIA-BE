@@ -12,7 +12,6 @@ module Types
     field :created_at, String, null: false
     field :updated_at, String, null: false
 
-
     def doctors
       object.doctors
     end
