@@ -3,6 +3,7 @@
 module Types
   class DoctorsType < Types::BaseObject
     field :id, Integer, null: false
+    field :condition_id, Integer, null: false
     field :name, String
     field :phone, String
     field :category, String
