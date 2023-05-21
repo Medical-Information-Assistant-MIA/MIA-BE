@@ -15,5 +15,6 @@ module Types
 
     field :destroy_user, mutation: Mutations::DestroyUser
     field :destroy_condition, mutation: Mutations::DestroyCondition
+    field :destroy_doctor, mutation: Mutations::DestroyDoctor
   end
 end
