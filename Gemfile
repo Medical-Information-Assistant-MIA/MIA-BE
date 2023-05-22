@@ -45,6 +45,7 @@ gem "faraday"
 gem "figaro"
 gem "graphiql-rails", github: "rmosolgo/graphiql-rails"
 gem "graphql"
+gem "httparty"
 gem "rack-cors"
 # The bundler-audit gem has been added for continuous integration
 

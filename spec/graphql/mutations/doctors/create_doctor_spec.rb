@@ -10,13 +10,13 @@ module Mutations
           expect(Doctor.count).to eq(0)
 
           post "/graphql",
-            params: { query: query(
-                      conditionId: condition.id,
-                      name: "Dr. Jenny",
-                      phone: "555-867-5309",
-                      address: "123 Healthy Ave.",
-                      category: "Cardiologist")
-                    }
+               params: { query: query(
+                 conditionId: condition.id,
+                 name: "Dr. Jenny",
+                 phone: "555-867-5309",
+                 address: "123 Healthy Ave.",
+                 category: "Cardiologist"
+               ) }
           data = JSON.parse(response.body, symbolize_names: true)
 
           expect(Doctor.count).to eq(1)
@@ -36,13 +36,13 @@ module Mutations
           expect(Doctor.count).to eq(0)
 
           post "/graphql",
-            params: { query: query(
-                      conditionId: condition.id,
-                      name: nil,
-                      phone: "555-867-5309",
-                      address: "123 Healthy Ave.",
-                      category: "Cardiologist")
-                    }
+               params: { query: query(
+                 conditionId: condition.id,
+                 name: nil,
+                 phone: "555-867-5309",
+                 address: "123 Healthy Ave.",
+                 category: "Cardiologist"
+               ) }
           data = JSON.parse(response.body, symbolize_names: true)
 
           expect(data[:data][:createDoctor][:errors]).to eq(["Name can't be blank"])
