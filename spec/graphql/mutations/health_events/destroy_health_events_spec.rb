@@ -23,7 +23,7 @@ module Mutations
         it "renders an error if a health event id does not exist" do
           user = create(:user)
           condition = create(:condition, user_id: user.id)
-          health_event = create(:health_event, condition_id: condition.id)
+          health_event = create(:health_event, condition_id: condition.id, category: 2)
           expect(HealthEvent.count).to eq(1)
 
           post "/graphql", params: { query: query(id: 333) }
