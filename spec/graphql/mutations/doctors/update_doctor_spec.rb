@@ -11,7 +11,7 @@ module Mutations
           expect(doctor.name).to_not eq("Dr. Jenny")
 
           post "/graphql",
-               params: { query: query(id: doctor.id, name: "Dr. Jenny") }
+              params: { query: query(id: doctor.id, name: "Dr. Jenny") }
           data = JSON.parse(response.body, symbolize_names: true)
 
           expect(response).to be_successful

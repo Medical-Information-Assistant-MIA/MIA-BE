@@ -15,9 +15,7 @@ module Mutations
       doctor = Doctor.find(id)
 
       if doctor.update(args)
-        { success: true, doctor:, errors: [] }
-      else
-        { success: false, doctor: nil, errors: doctor.errors.full_messages }
+        { success: true, doctor: doctor, errors: [] }
       end
     rescue ActiveRecord::RecordNotFound
       { success: false, doctor: nil, errors: ["record-not-found"] }
