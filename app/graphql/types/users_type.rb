@@ -14,7 +14,7 @@ module Types
     end
 
 		def updated_at
-			object.updated_at.strftime("%B %d, %Y
+			object.updated_at.strftime("%B %d, %Y")
 		end
   end
 end
