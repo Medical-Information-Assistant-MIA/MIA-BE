@@ -7,6 +7,7 @@ module Types
     field :create_doctor, mutation: Mutations::CreateDoctor
     field :create_medication, mutation: Mutations::CreateMedication
     field :create_health_event, mutation: Mutations::CreateHealthEvent
+    field :destroy_health_event, mutation: Mutations::DestroyHealthEvent
 
     field :update_user, mutation: Mutations::UpdateUser
     field :update_condition, mutation: Mutations::UpdateCondition
