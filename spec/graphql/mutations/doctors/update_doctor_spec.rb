@@ -34,7 +34,6 @@ module Mutations
           expect(data[:data][:updateDoctor][:errors]).to eq(["record-not-found"])
           expect(data[:data][:updateDoctor][:success]).to eq(false)
         end
-      end
 
       def query(name:, id:)
         <<~GQL
