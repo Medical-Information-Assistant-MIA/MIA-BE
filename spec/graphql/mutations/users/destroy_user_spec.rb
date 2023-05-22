@@ -29,6 +29,21 @@ module Mutations
           expect(data[:data][:destroyUser][:success]).to eq(false)
           expect(User.count).to eq(1)
         end
+
+        it "renders an error if the deletion fails" do
+          user = create(:user)
+          expect(User.count).to eq(1)
+
+          allow(User).to receive(:find_by).and_return(user)
+          allow(user).to receive(:destroy).and_return(false)
+          allow(user).to receive_message_chain(:errors, :full_messages).and_return(["User deletion failed"])
+
+          post "/graphql", params: { query: query(id: user.id) }
+          data = JSON.parse(response.body, symbolize_names: true)
+
+          expect(data[:data][:destroyUser][:errors]).to eq(["User deletion failed"])
+          expect(data[:data][:destroyUser][:success]).to eq(false)
+        end
       end
 
       def query(id:)
