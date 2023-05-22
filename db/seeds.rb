@@ -15,7 +15,7 @@ CONDITIONS = [
   'Gastritis'
 ].freeze
 
-def fetch_random_medication_name
+def fetch_random_medication_names
   url = URI('https://api.fda.gov/drug/label.json?count=openfda.brand_name.exact&limit=50')
 
   response = Net::HTTP.get(url)
@@ -29,89 +29,80 @@ rescue StandardError => e
 end
 
 def unique_random_medication_name(existing_names)
-  all_medication_names = fetch_random_medication_name
+  all_medication_names = fetch_random_medication_names
   available_names = all_medication_names - existing_names
   available_names.sample || 'Unknown Medication'
 end
 
+def create_user(name)
+  email = "#{name.downcase.tr(' ', '_')}@example.com"
+  User.create(name: name, email: email)
+end
+
+def create_condition(user)
+  condition_name = CONDITIONS.sample
+  Condition.create(user: user, name: condition_name)
+end
+
+def create_doctor(condition)
+  Doctor.create(
+    condition: condition,
+    name: "Dr. " + Faker::DcComics.name,
+    address: Faker::Address.full_address,
+    phone: Faker::PhoneNumber.phone_number,
+    category: Faker::Job.field
+  )
+end
+
+def create_medication(condition, existing_medication_names, doctor)
+  medication_name = unique_random_medication_name(existing_medication_names)
+  existing_medication_names << medication_name
+
+  Medication.create(
+    condition: condition,
+    name: medication_name,
+    date_prescribed: Faker::Date.between(from: 5.years.ago, to: Date.today),
+    dosage: '100mg',
+    frequency: 'daily',
+    prescribed_by: doctor.name
+  )
+end
+
+def create_health_event(condition)
+  HealthEvent.create(
+    condition: condition,
+    note: Faker::Cannabis.medical_use,
+    date: Faker::Date.between(from: 1.year.ago, to: Date.today),
+    category: Faker::Number.between(from: 0, to: 2) # Adjust range as per your category options
+  )
+end
+
 def seed_data
   # Create User 1 with Conditions, Doctors, Medications, and Health Events
-  user1_name = Faker::DcComics.villain
-  user1_email = "#{user1_name.downcase.tr(' ', '_')}@example.com"
-  user1 = User.create(name: user1_name, email: user1_email)
+  user1 = create_user(Faker::DcComics.villain)
 
   existing_medication_names = []
   3.times do
-    condition_name = CONDITIONS.sample
-    condition = Condition.create(user: user1, name: condition_name)
+    condition = create_condition(user1)
 
     2.times do
-      doctor = Doctor.create(
-        condition: condition,
-        name: Faker::DcComics.name,
-        address: Faker::Address.full_address,
-        phone: Faker::PhoneNumber.phone_number,
-        category: Faker::Job.field
-      )
-
-      medication_name = unique_random_medication_name(existing_medication_names)
-      existing_medication_names << medication_name
-
-      medication = Medication.create(
-        condition: condition,
-        name: medication_name,
-        date_prescribed: Faker::Date.between(from: 5.years.ago, to: Date.today),
-        dosage: '100mg',
-        frequency: 'daily',
-        prescribed_by: doctor.name
-      )
-
-      HealthEvent.create(
-        condition: condition,
-        note: Faker::Cannabis.medical_use,
-        date: Faker::Date.between(from: 1.year.ago, to: Date.today),
-        category: Faker::Number.between(from: 0, to: 2) # Adjust range as per your category options
-      )
+      doctor = create_doctor(condition)
+      create_medication(condition, existing_medication_names, doctor)
+      create_health_event(condition)
     end
   end
 
   # Create User 2 with Conditions, Doctors, Medications, and Health Events
-  user2_name = Faker::DcComics.villain
-  user2_email = "#{user2_name.downcase.tr(' ', '_')}@example.com"
-  user2 = User.create(name: user2_name, email: user2_email)
+  user2 = create_user(Faker::DcComics.villain)
 
   existing_medication_names = []
   3.times do
-    condition_name = CONDITIONS.sample
-    condition = Condition.create(user: user2, name: condition_name)
+    condition = create_condition(user2)
 
     2.times do
-      doctor = Doctor.create(
-        condition: condition,
-        name: Faker::DcComics.name,
-        address: Faker::Address.full_address,
-        phone: Faker::PhoneNumber.phone_number,
-        category: Faker::Job.field
-      )
-
-      medication_name = unique_random_medication_name(existing_medication_names)
-      existing_medication_names << medication_name
-
-      medication = Medication.create(
-        condition: condition,
-        name: medication_name,
-        date_prescribed: Faker::Date.between(from: 5.years.ago, to: Date.today),
-        dosage: '100mg',
-        frequency: 'daily',
-        prescribed_by: doctor.name
-      )
-
-      HealthEvent.create(
-        condition: condition,
-        note: Faker::Cannabis.medical_use,
-        date: Faker::Date.between(from: 1.year.ago, to: Date.today),
-        category: Faker::Number.between(from: 0, to: 2) # Adjust range as per your category options
-      )
+      doctor = create_doctor(condition)
+      create_medication(condition, existing_medication_names, doctor)
+      create_health_event(condition)
     end
   end
 end
