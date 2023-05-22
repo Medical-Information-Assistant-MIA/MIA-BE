@@ -8,13 +8,6 @@ module Types
     field :conditions, [Types::ConditionsType], null: true
     field :created_at, String, null: false
     field :updated_at, String, null: false
-
-    def created_at
-      object.created_at.strftime("%B %d, %Y")
-    end
-
-		def updated_at
-			object.updated_at.strftime("%B %d, %Y")
-		end
+    
   end
 end
