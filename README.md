@@ -182,7 +182,7 @@ All tests should be passing if the installation was successful.
 
 ## __Available Endpoints__
 
-Here are the current endpoints for the mock server through postman
+Current endpoint documentation exists in the Postman Mock Server below.
 https://documenter.getpostman.com/view/27373334/2s93kxc6FD
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -197,12 +197,22 @@ See the official project requirements [here](https://mod4.turing.edu/projects/ca
 
 ### __Learning Goals__
 <!-- Add Learning Goals -->
+* Demonstrate knowledge you’ve gained throughout Turing
+* Use an agile process to turn well defined requirements into deployed and production ready software
+* Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged.
+* Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
+* Practice an advanced, professional git workflow including a Pull Request Review
+* Gain experience using continuous integration tools to build and automate the deployment of features
+* Build applications that execute in development, test, CI, and production environments
+* Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### __Future Goals__
 <!-- Add Future Goals -->
-
+* Add additional querying options for more user friendly trend data representation
+* Utilize caching for optimization
+* Containerize using Docker and deploy to AWS
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <br>
