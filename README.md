@@ -1,25 +1,30 @@
 <a name="readme-top"></a>
 
+<div align="center">
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
+</div>
 
+<div align="center">
 
+# Medical Information Assistant(MIA)
 
-<br />
+</div>
 <div align="center">
   <!-- <a href="https://github.com/pantry-wizard/pantry_wizard_be">
     <img src="LOGO_URL_HERE" alt="Logo" width="582" height="404">
   </a> -->
-
 <h3 align="center"></h3>
 
-  <p align="center">
+  <div align="center">
     <!-- ADD APP DESCRIPTION ****************** -->
     <br>
-    This is the backend service of the application.
+    <p> Medical Information Assistant (MIA) is a service oriented application that allows users to document their personal medical information in a customizable and intuitive way. 
+    </p>
     <br />
     <!-- <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
@@ -31,7 +36,7 @@
     <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-BE/issues">Request Feature</a>
     ·
     <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-FE">Front End Repo</a>
-  </p>
+  </div>
 </div>
 
 
@@ -76,7 +81,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+## Built With:
 ### Backend:
 
 [![Ruby]][Ruby-url] **3.1.1**
@@ -84,24 +89,22 @@
 [![Postgresql]][Postgresql-url] **1.1**
 [![GraphQL]][GraphQL-url]
 [![GraphiQL]][GraphiQL-url]
-[![JSON-Serializer]][JSON-Serializer-url]
+
 
 ### Testing:
 
-[![Capybara]][Capybara-url]
+
 [![Faker]][Faker-url]
 [![Factory Bot]][Factory Bot-url]
 [![RSpec]][RSpec-url]
 [![Shoulda-Matchers]][Shoulda-Matchers-url]
 [![SimpleCov]][SimpleCov-url]
-[![VCR]][VCR-url]
-[![Web-mock]][Web-mock-url]
+
 
 ### Development Tools:
 
 [![Heroku]][Heroku-url]
 [![Faraday]][Faraday-url]
-[![Figaro]][Figaro-url]
 [![RuboCop]][RuboCop-url]
 
 
@@ -138,11 +141,6 @@
    rails db:migrate
    ```
 
-5. Install Figaro to establish environment variables:
-   ```bash
-   bundle exec figaro install
-   ```
-
 <!-- ADD THIS NEXT STEP ONCE AN EXTERNAL API IS INCORPORATED -->
 <!-- 6. Add your API key to the application.yml file
     ```bash
@@ -172,8 +170,7 @@ Once `MIA-BE` is correctly installed, run tests locally to ensure the repository
 
 All tests should be passing if the installation was successful. 
 
-<!-- If any tests are not passing, please report which tests are not passing <a href="PLEASE UPDATE LINK">Here</a>. We will issue an update/fix as soon as possible! -->
-
+If any tests are not passing, please report which tests are not passing <a href="PLEASE UPDATE LINK">Here</a>. We will issue an update/fix as soon as possible.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,12 +193,25 @@ See the official project requirements [here](https://mod4.turing.edu/projects/ca
 <br>
 
 ### __Learning Goals__
-<!-- Add Learning Goals -->
+<ul>
+  <li>Use an agile process to turn well defined requirements into deployed and production ready software. </li>
+  <li>Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged. </li>
+  <li>Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing. </li>
+  <li>Practice an advanced, professional git workflow including a Pull Request Review.</li>
+  <li>Gain experience using continuous integration tools to build and automate the deployment of features. </li>
+  <li>Build applications that execute in development, test, CI, and production environments. </li>
+  <li>Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec. </li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### __Future Goals__
-<!-- Add Future Goals -->
+<ul>
+  <li> Add user authentication / authoriazation. </li>
+  <li> Containerize the application via docker.</li>
+  <li> Add a microservice that consumes an exerternal API for medication information. </li>
+  <li> Deploy the application to another service such as Amazon or Digital Ocean. </li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,7 +219,7 @@ See the official project requirements [here](https://mod4.turing.edu/projects/ca
 
 ## __Database Schema__
 
-<!-- Insert Image Here -->
+<img src=images/schema.png alt="Database Schema">
 
 <br>
 
