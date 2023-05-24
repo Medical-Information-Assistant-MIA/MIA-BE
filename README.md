@@ -47,6 +47,7 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+			
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -179,7 +180,7 @@ If any tests are not passing, please report which tests are not passing <a href=
 
 ## __Available Endpoints__
 
-Here are the current endpoints for the mock server through postman
+Current endpoint documentation exists in the Postman Mock Server below.
 https://documenter.getpostman.com/view/27373334/2s93kxc6FD
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -200,6 +201,8 @@ See the official project requirements [here](https://mod4.turing.edu/projects/ca
   <li>Practice an advanced, professional git workflow including a Pull Request Review.</li>
   <li>Gain experience using continuous integration tools to build and automate the deployment of features. </li>
   <li>Build applications that execute in development, test, CI, and production environments. </li>
+  <li>Add additional querying options for more user friendly trend data representation. </li>
+  <li>Utilize caching for optimization. </li>
   <li>Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec. </li>
 </ul>
 
@@ -208,7 +211,9 @@ See the official project requirements [here](https://mod4.turing.edu/projects/ca
 ### __Future Goals__
 <ul>
   <li> Add user authentication / authoriazation. </li>
+  <li> Utilize caching for optimization.</li>
   <li> Containerize the application via docker.</li>
+  <li> Add additional querying options for more user friendly trend data representation.</li>
   <li> Add a microservice that consumes an exerternal API for medication information. </li>
   <li> Deploy the application to another service such as Amazon or Digital Ocean. </li>
 </ul>

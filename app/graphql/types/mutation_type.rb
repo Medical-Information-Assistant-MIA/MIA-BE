@@ -7,6 +7,8 @@ module Types
     field :create_doctor, mutation: Mutations::CreateDoctor
     field :create_medication, mutation: Mutations::CreateMedication
     field :create_health_event, mutation: Mutations::CreateHealthEvent
+    field :destroy_health_event, mutation: Mutations::DestroyHealthEvent
+    field :update_health_event, mutation: Mutations::UpdateHealthEvent
 
     field :update_user, mutation: Mutations::UpdateUser
     field :update_condition, mutation: Mutations::UpdateCondition
@@ -16,5 +18,6 @@ module Types
     field :destroy_user, mutation: Mutations::DestroyUser
     field :destroy_condition, mutation: Mutations::DestroyCondition
     field :destroy_doctor, mutation: Mutations::DestroyDoctor
+    field :destroy_medication, mutation: Mutations::DestroyMedication
   end
 end
