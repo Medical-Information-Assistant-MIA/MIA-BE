@@ -33,6 +33,10 @@ module Types
       argument :conditionId, Integer, required: true
     end
 
+		field :users_doctors, [Types::DoctorsType], null: false do
+			argument :userId, Integer, required: true
+		end
+
     def user(id:)
       User.find(id)
     end
@@ -61,5 +65,9 @@ module Types
     def condition_health_events(conditionId:)
       Condition.find(conditionId).health_events
     end
+
+		def users_doctors(userId:)
+			User.find(userId).doctors.uniq
+		end
   end
 end
