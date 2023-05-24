@@ -15,6 +15,24 @@ CONDITIONS = [
   'Gastritis'
 ].freeze
 
+SPECIALTIES = [
+	'Neurologist',
+	'Cardiologist',
+	'Primary Care',
+	'Gastroenterologist',
+	'Psychiatrist',
+	'Urologist',
+	'Pulmonologist',
+	'Oncologist',
+	'Endocrinologist',
+	'Gynecologist',
+	'Pediatrician',
+	'Orthopedist',
+	'Nephrologist',
+	'Dermatologist',
+	'Allergist'	
+].freeze
+
 def fetch_random_medication_names
   url = URI('https://api.fda.gov/drug/label.json?count=openfda.brand_name.exact&limit=50')
 
@@ -45,12 +63,13 @@ def create_condition(user)
 end
 
 def create_doctor(condition)
+	doctor_category = SPECIALTIES.sample
   Doctor.create(
     condition: condition,
     name: "Dr. " + Faker::DcComics.name,
     address: Faker::Address.full_address,
     phone: Faker::PhoneNumber.phone_number,
-    category: Faker::Job.field
+    category: doctor_category
   )
 end
 
