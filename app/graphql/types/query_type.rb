@@ -33,7 +33,7 @@ module Types
       argument :conditionId, Integer, required: true
     end
 
-		field :users_doctors, [Types::DoctorsType], null: false do
+		field :user_doctors, [Types::DoctorsType], null: false do
 			argument :userId, Integer, required: true
 		end
 
@@ -66,7 +66,7 @@ module Types
       Condition.find(conditionId).health_events
     end
 
-		def users_doctors(userId:)
+		def user_doctors(userId:)
 			User.find(userId).doctors.uniq
 		end
   end
