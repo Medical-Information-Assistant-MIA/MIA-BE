@@ -14,6 +14,9 @@
 ![Mia-logo](https://github.com/Medical-Information-Assistant-MIA/MIA-BE/assets/114954379/1dca58f7-2c8e-40bb-ae61-a5c3cb8bacde)
 
 # Medical Information Assistant (MIA)
+![Workflow Status](https://github.com/Medical-Information-Assistant-MIA/MIA-BE/actions/workflows/rubyonrails.yml/badge.svg)
+
+
 
 </div>
 <div align="center">
