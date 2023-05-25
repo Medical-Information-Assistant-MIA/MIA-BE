@@ -13,26 +13,16 @@
 	
 ![Mia-logo](https://github.com/Medical-Information-Assistant-MIA/MIA-BE/assets/114954379/1dca58f7-2c8e-40bb-ae61-a5c3cb8bacde)
 
-# Medical Information Assistant(MIA)
+# Medical Information Assistant (MIA)
 
 </div>
 <div align="center">
-  <!-- <a href="https://github.com/pantry-wizard/pantry_wizard_be">
-    <img src="LOGO_URL_HERE" alt="Logo" width="582" height="404">
-  </a> -->
-<h3 align="center"></h3>
+  <h3 align="center"></h3>
 
   <div align="center">
-    <!-- ADD APP DESCRIPTION ****************** -->
     <br>
-    <p> Medical Information Assistant (MIA) is a service oriented application that allows users to document their personal medical information in a customizable and intuitive way. 
-    </p>
+    <p> Medical Information Assistant (MIA) is a service-oriented application that allows users to document their personal medical information in a customizable and intuitive way.</p>
     <br />
-    <!-- <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
-    <!-- <br /> -->
-    <!-- <br /> -->
-    <!-- <a href="https://github.com/github_username/repo_name">View Demo</a> -->
-    <!-- · -->
     <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-BE/issues">Report Bug</a>
     ·
     <a href="https://github.com/Medical-Information-Assistant-MIA/MIA-BE/issues">Request Feature</a>
@@ -41,21 +31,16 @@
   </div>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-			
+    <li><a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
+    <li><a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#testing-with-rspec">Testing With RSpec</a></li>
@@ -63,26 +48,17 @@
     </li>
     <li><a href="#available-endpoints">Available Endpoints</a></li>
     <li><a href="#goals">Goals</a></li>
-    <!-- <li><a href="#usage">Usage</a></li> -->
-    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
-    <!-- <li><a href="#contributing">Contributing</a></li> -->
-    <!-- <li><a href="#license">License</a></li> -->
-    <!-- <li><a href="#contact">Contact</a></li> -->
-    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
   </ol>
 </details>
-
 
 <br>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<br>
 
 <!-- ADD PROJECT DESCRIPTION -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## Built With:
 ### Backend:
@@ -96,13 +72,11 @@
 
 ### Testing:
 
-
 [![Faker]][Faker-url]
 [![Factory Bot]][Factory Bot-url]
 [![RSpec]][RSpec-url]
 [![Shoulda-Matchers]][Shoulda-Matchers-url]
 [![SimpleCov]][SimpleCov-url]
-
 
 ### Development Tools:
 
