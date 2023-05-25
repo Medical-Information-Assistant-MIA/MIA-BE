@@ -154,122 +154,71 @@ If any tests are not passing, please report which tests are not passing <a href=
 <br>
 
 
-## __Available Endpoints__
+## Available Endpoints
 
-Current endpoint documentation exists in the Postman Mock Server below.
-https://documenter.getpostman.com/view/27373334/2s93kxc6FD
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## __Goals__
-
-MIA was crafted to satisfy the requirements for The Turing Mod 4 **Capstone Project**. 
-
-See the official project requirements [here](https://mod4.turing.edu/projects/capstone/).
-
-<br>
-
-### __Learning Goals__
-<ul>
-  <li>Use an agile process to turn well defined requirements into deployed and production ready software. </li>
-  <li>Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged. </li>
-  <li>Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing. </li>
-  <li>Practice an advanced, professional git workflow including a Pull Request Review.</li>
-  <li>Gain experience using continuous integration tools to build and automate the deployment of features. </li>
-  <li>Build applications that execute in development, test, CI, and production environments. </li>
-  <li>Add additional querying options for more user friendly trend data representation. </li>
-  <li>Utilize caching for optimization. </li>
-  <li>Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec. </li>
-</ul>
+Current endpoint documentation exists in the [Postman Mock Server](https://documenter.getpostman.com/view/27373334/2s93kxc6FD).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### __Future Goals__
-<ul>
-  <li> Add user authentication / authoriazation. </li>
-  <li> Utilize caching for optimization.</li>
-  <li> Containerize the application via docker.</li>
-  <li> Add additional querying options for more user friendly trend data representation.</li>
-  <li> Add a microservice that consumes an exerternal API for medication information. </li>
-  <li> Deploy the application to another service such as Amazon or Digital Ocean. </li>
-</ul>
+## Goals
+
+MIA was crafted to satisfy the requirements for The Turing Mod 4 **Capstone Project**. See the official project requirements [here](https://mod4.turing.edu/projects/capstone/).
+
+### Learning Goals
+- Use an agile process to turn well-defined requirements into deployed and production-ready software.
+- Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service-oriented architecture concepts and patterns are highly encouraged.
+- Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing.
+- Practice an advanced, professional git workflow including a Pull Request Review.
+- Gain experience using continuous integration tools to build and automate the deployment of features.
+- Build applications that execute in development, test, CI, and production environments.
+- Add additional querying options for more user-friendly trend data representation.
+- Utilize caching for optimization.
+- Focus on communication between front-end and back-end teams to complete and deploy features outlined by the project spec.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Future Goals
+- Add user authentication/authorization.
+- Utilize caching for optimization.
+- Containerize the application via Docker.
+- Add additional querying options for more user-friendly trend data representation.
+- Add a microservice that consumes an external API for medication information.
+- Deploy the application to another service such as Amazon or Digital Ocean.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Database Schema
+
+![Database Schema](images/schema.png)
+
 <br>
 
-## __Database Schema__
+## Back End Team
 
-<img src=images/schema.png alt="Database Schema">
+| Brad Dunlap | Chris Crane | Kara Jones-Hofmann | Matt Enyeart | Tori Enyart |
+|---|---|---|---|---|
+| [GitHub](https://github.com/brad-dunlap)<br>[LinkedIn](https://www.linkedin.com/in/dunlap-brad/) | [GitHub](https://github.com/GreenGogh47)<br>[LinkedIn](https://www.linkedin.com/in/chris-crane-16106814/) | [GitHub](https://github.com/KaraJoHo)<br>[LinkedIn](https://www.linkedin.com/in/81012911-91208/) | [GitHub](https://github.com/menyeart)<br>[LinkedIn](https://www.linkedin.com/in/matt-enyeart/) | [GitHub](https://github.com/torienyart)<br>[LinkedIn](https://www.linkedin.com/in/victoria-enyart-595052155/) |
 
-<br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## __Back End Team__
-<table>
-<!-- Update picture links -->
-  <!-- <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/116330317?s=120&v=4"></td>
-    <td><img src="https://avatars.githubusercontent.com/u/88596340?s=120&v=4"></td>
-    <td><img src="https://avatars.githubusercontent.com/u/104170346?s=120&v=4"></td>
-    <td><img src="https://avatars.githubusercontent.com/u/71752551?s=120&v=4"></td>
-    <td><img src="https://avatars.githubusercontent.com/u/117066950?s=120&v=4"></td>
-  </tr> -->
-  <tr>
-    <td>Brad Dunlap</td>
-    <td>Chris Crane</td>
-    <td>Kara Jones-Hofmann</td>
-    <td>Matt Enyeart</td>
-    <td>Tori Enyart</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/brad-dunlap">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/dunlap-brad/">LinkedIn</a> 
-    </td>
-    <td>
-      <a href="https://github.com/GreenGogh47">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/chris-crane-16106814/">LinkedIn</a>
-    </td>
-    <td>
-      <a href="https://github.com/KaraJoHo">GitHub</a><br>
-   		<a href="https://www.linkedin.com/in/81012911-91208/">LinkedIn</a>
-    </td>
-    <td>
-      <a href="https://github.com/menyeart">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/matt-enyeart/">LinkedIn</a>
-    </td>
-    <td>
-      <a href="https://github.com/torienyart">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/victoria-enyart-595052155/">LinkedIn</a>
-    </td> 
-    <td>
-      <!-- <a href="https://github.com/tori">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/tori/">LinkedIn</a> -->
-    </td>
-  </tr>
-</table>
-
-
-<!-- PROJECT MANAGER -->
 ## Project Manager
 
-* Brian Zanti
-<!-- Project Mentor -->
+- Brian Zanti
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Mentor
 
-* Daniel Starling
+- Daniel Starling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* ["The Best README Template" by Github User othneil](https://github.com/othneildrew/Best-README-Template)
-
+- ["The Best README Template" by Github User othneil](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
