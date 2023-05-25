@@ -61,7 +61,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Built With:
-### Backend:
 
 [![Ruby]][Ruby-url] **3.1.1**
 [![Rails]][Rails-url] **7.0.4**
